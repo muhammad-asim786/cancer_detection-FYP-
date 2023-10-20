@@ -1,4 +1,5 @@
 import 'package:canecer_scan/core/constant/color.dart';
+import 'package:canecer_scan/view/animation/fade_animation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -14,27 +15,27 @@ class CustomTextWihtAccount extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return RichText(
-        text: TextSpan(
+    return Row(
       children: [
-        TextSpan(
-            text: text,
+        Text(text,
             style: GoogleFonts.poppins(
               textStyle: TextStyle(
                 fontSize: 16.sp,
                 color: blackColor,
               ),
             )),
-        TextSpan(
-            text: text2,
-            style: GoogleFonts.poppins(
-              textStyle: TextStyle(
-                fontSize: 16.sp,
-                color: primaryColor,
-                fontWeight: FontWeight.bold,
-              ),
-            )),
+        FadeAnimation(
+          0.5,
+          Text(text2,
+              style: GoogleFonts.poppins(
+                textStyle: TextStyle(
+                  fontSize: 17.sp,
+                  color: primaryColor,
+                  fontWeight: FontWeight.bold,
+                ),
+              )),
+        ),
       ],
-    ));
+    );
   }
 }

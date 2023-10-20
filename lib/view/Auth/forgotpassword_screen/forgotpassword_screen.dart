@@ -1,13 +1,15 @@
 import 'package:canecer_scan/core/constant/color.dart';
 import 'package:canecer_scan/core/constant/image.dart';
 import 'package:canecer_scan/view/Auth/signup_screen/signup_screen.dart';
-import 'package:canecer_scan/view/custom_widget/custom_text.dart';
-import 'package:canecer_scan/view/custom_widget/custom_textfield.dart';
+import 'package:canecer_scan/view/animation/fade_animation.dart';
+import 'package:canecer_scan/view/widgets/custom_text.dart';
+import 'package:canecer_scan/view/widgets/custom_textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import '../../custom_widget/custom_button.dart';
-import '../../custom_widget/custom_text_account.dart';
+
+import '../../widgets/custom_button.dart';
+import '../../widgets/custom_text_account.dart';
 
 class ForgotpasswordScreen extends StatelessWidget {
   const ForgotpasswordScreen({super.key});
@@ -47,9 +49,9 @@ class ForgotpasswordScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 60.h),
-              CustomTextField(hintText: 'Enter Email'),
+              FadeAnimation(0.7, CustomTextField(hintText: 'Enter Email')),
               SizedBox(height: 60.h),
-              DefaultButton(text: 'Send Code'),
+              FadeAnimation(0.9, DefaultButton(text: 'Send Code')),
               SizedBox(height: 60.h),
               Align(
                 alignment: Alignment.bottomCenter,

@@ -1,14 +1,16 @@
 import 'package:canecer_scan/core/constant/color.dart';
 import 'package:canecer_scan/core/constant/image.dart';
 import 'package:canecer_scan/view/Auth/signin_screen/signin_screen.dart';
-import 'package:canecer_scan/view/custom_widget/custom_text.dart';
-import 'package:canecer_scan/view/custom_widget/custom_textfield.dart';
+import 'package:canecer_scan/view/animation/fade_animation.dart';
+import 'package:canecer_scan/view/widgets/custom_text.dart';
+import 'package:canecer_scan/view/widgets/custom_textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import '../../custom_widget/custom_button.dart';
-import '../../custom_widget/custom_text_account.dart';
-import '../../custom_widget/cutom_facebook_google_logo.dart';
+
+import '../../widgets/custom_button.dart';
+import '../../widgets/custom_text_account.dart';
+import '../../widgets/cutom_facebook_google_logo.dart';
 
 class SignInUpScreen extends StatelessWidget {
   const SignInUpScreen({super.key});
@@ -28,27 +30,29 @@ class SignInUpScreen extends StatelessWidget {
                     fontSize: 25.sp,
                     fontWeight: FontWeight.bold),
               ),
-              CircleAvatar(
-                radius: 80.r,
-                backgroundImage: AssetImage(profileIamge),
-              ),
+              FadeAnimation(
+                  0.4,
+                  CircleAvatar(
+                    radius: 80.r,
+                    backgroundImage: AssetImage(profileIamge),
+                  )),
               SizedBox(height: 50.h),
-              CustomTextField(hintText: 'Email'),
+              FadeAnimation(0.6, CustomTextField(hintText: 'Email')),
               SizedBox(height: 30.h),
-              CustomTextField(hintText: 'Name'),
+              FadeAnimation(0.7, CustomTextField(hintText: 'Name')),
               SizedBox(height: 30.h),
-              CustomTextField(hintText: 'Phone No.'),
+              FadeAnimation(0.8, CustomTextField(hintText: 'Phone No.')),
               SizedBox(height: 30.h),
-              CustomTextField(hintText: 'Gender'),
+              FadeAnimation(0.10, CustomTextField(hintText: 'Gender')),
               SizedBox(height: 30.h),
-              CustomTextField(hintText: 'Date of birth'),
+              FadeAnimation(0.11, CustomTextField(hintText: 'Date of birth')),
               SizedBox(height: 30.h),
-              CustomTextField(hintText: 'Address'),
+              FadeAnimation(0.12, CustomTextField(hintText: 'Date of birth')),
               SizedBox(height: 30.h),
-              CustomTextField(hintText: 'Password'),
+              FadeAnimation(0.14, CustomTextField(hintText: 'Password')),
               SizedBox(height: 20.h),
               SizedBox(height: 40.h),
-              DefaultButton(text: 'Register'),
+              FadeAnimation(0.10, DefaultButton(text: 'Register')),
               SizedBox(height: 60.h),
               CustomText(
                 text: 'or login using ',

@@ -1,11 +1,12 @@
 import 'package:canecer_scan/core/constant/color.dart';
 import 'package:canecer_scan/core/constant/image.dart';
-import 'package:canecer_scan/view/custom_widget/custom_text.dart';
-import 'package:canecer_scan/view/custom_widget/custom_textfield.dart';
+import 'package:canecer_scan/view/widgets/custom_text.dart';
+import 'package:canecer_scan/view/widgets/custom_textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../custom_widget/custom_button.dart';
-import '../../custom_widget/custom_text_account.dart';
+
+import '../../widgets/custom_button.dart';
+import '../../widgets/custom_text_account.dart';
 
 class CreatenewpasswordScreen extends StatelessWidget {
   const CreatenewpasswordScreen({super.key});

@@ -18,8 +18,6 @@ class _CustomTextFieldState extends State<CustomTextField> {
   @override
   void initState() {
     super.initState();
-
-    // Add a listener to the focus node to change the UI when focused.
     _focusNode.addListener(() {
       setState(() {});
     });

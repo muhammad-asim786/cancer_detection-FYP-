@@ -4,7 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 
 import '../../core/constant/color.dart';
-import '../custom_widget/custom_text.dart';
+import '../animation/fade_animation.dart';
+import '../widgets/custom_text.dart';
 import 'onboarding_model.dart';
 
 class OnboardingScreen extends StatelessWidget {
@@ -22,9 +23,12 @@ class OnboardingScreen extends StatelessWidget {
                 controller: model.pageController,
                 onPageChanged: (int index) => model.currentPageIndex = index,
                 children: [
-                  _buildOnboardingPage(imagePath: firstOnbaridingImage),
-                  _buildOnboardingPage(imagePath: secondOnbaridingImage),
-                  _buildOnboardingPage(imagePath: thirdOnbaridingImage),
+                  FadeAnimation(0.5,
+                      _buildOnboardingPage(imagePath: firstOnbaridingImage)),
+                  FadeAnimation(0.5,
+                      _buildOnboardingPage(imagePath: secondOnbaridingImage)),
+                  FadeAnimation(0.5,
+                      _buildOnboardingPage(imagePath: thirdOnbaridingImage))
                 ]),
           ),
           Align(
@@ -40,12 +44,14 @@ class OnboardingScreen extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: Column(children: [
                         SizedBox(height: 25.h),
-                        CustomText(
-                          text: 'Skip',
-                          color: whiteColor,
-                          fontSize: 15.sp,
-                          fontWeight: FontWeight.w400,
-                        ),
+                        FadeAnimation(
+                            0.1,
+                            CustomText(
+                              text: 'Skip',
+                              color: whiteColor,
+                              fontSize: 15.sp,
+                              fontWeight: FontWeight.w400,
+                            )),
                         SizedBox(height: 30.h),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -85,26 +91,30 @@ class OnboardingScreen extends StatelessWidget {
                           ],
                         ),
                         SizedBox(height: 30.h),
-                        CustomText(
-                            fontSize: 24.sp,
-                            fontWeight: FontWeight.bold,
-                            text: model.currentPageIndex == 0
-                                ? 'Track and map'
-                                : model.currentPageIndex == 2
-                                    ? 'Act in time'
-                                    : 'Skin health in a snap',
-                            color: whiteColor),
+                        FadeAnimation(
+                            1.5,
+                            CustomText(
+                                fontSize: 24.sp,
+                                fontWeight: FontWeight.bold,
+                                text: model.currentPageIndex == 0
+                                    ? 'Track and map'
+                                    : model.currentPageIndex == 2
+                                        ? 'Act in time'
+                                        : 'Skin health in a snap',
+                                color: whiteColor)),
                         SizedBox(height: 35.h),
-                        CustomText(
-                            fontSize: 18.sp,
-                            textAlign: TextAlign.center,
-                            maxLines: 2,
-                            text: model.currentPageIndex == 0
-                                ? 'Create your body map and track your skin spots regularly.'
-                                : model.currentPageIndex == 2
-                                    ? 'Get personalised insights and reminders.Know when to visit a doctor'
-                                    : 'Track every spot with a photo and followup alerts',
-                            color: whiteColor),
+                        FadeAnimation(
+                            1.5,
+                            CustomText(
+                                fontSize: 18.sp,
+                                textAlign: TextAlign.center,
+                                maxLines: 2,
+                                text: model.currentPageIndex == 0
+                                    ? 'Create your body map and track your skin spots regularly.'
+                                    : model.currentPageIndex == 2
+                                        ? 'Get personalised insights and reminders.Know when to visit a doctor'
+                                        : 'Track every spot with a photo and followup alerts',
+                                color: whiteColor)),
                         SizedBox(height: 30.h),
                         Container(
                           height: 60.h,
@@ -152,75 +162,3 @@ Widget _buildOnboardingPage({required String imagePath}) {
     ],
   );
 }
-
-
-// Column(children: [
-//                 CustomText(text: 'Skip', color: whiteColor),
-//                 SizedBox(height: 20.h),
-//                 Row(
-//                   mainAxisAlignment: MainAxisAlignment.center,
-//                   children: [
-//                     Container(
-//                       height: 10.h,
-//                       width: 10.w,
-//                       decoration: BoxDecoration(
-//                         shape: BoxShape.circle,
-//                         color: model.currentPageIndex == 0
-//                             ? whiteColor
-//                             : Colors.grey,
-//                       ),
-//                     ),
-//                     SizedBox(width: 10.w),
-//                     Container(
-//                       height: 10.h,
-//                       width: 10.w,
-//                       decoration: BoxDecoration(
-//                         shape: BoxShape.circle,
-//                         color: model.currentPageIndex == 1
-//                             ? whiteColor
-//                             : Colors.grey,
-//                       ),
-//                     ),
-//                     SizedBox(width: 10.w),
-//                     Container(
-//                       height: 10.h,
-//                       width: 10.w,
-//                       decoration: BoxDecoration(
-//                         shape: BoxShape.circle,
-//                         color: model.currentPageIndex == 2
-//                             ? whiteColor
-//                             : Colors.grey,
-//                       ),
-//                     ),
-//                   ],
-//                 ),
-//                 SizedBox(height: 20.h),
-//                 CustomText(
-//                     text: model.currentPageIndex == 0
-//                         ? 'Track and map'
-//                         : model.currentPageIndex == 2
-//                             ? 'Act in time'
-//                             : 'Skin health in a snap',
-//                     color: whiteColor),
-//                 SizedBox(height: 20.h),
-//                 CustomText(
-//                     text: model.currentPageIndex == 0
-//                         ? 'Create your body map and track your skin spots regularly.'
-//                         : model.currentPageIndex == 2
-//                             ? 'Get personalised insights and reminders.Know when to visit a doctor'
-//                             : 'Track every spot with a photo and followup alerts',
-//                     color: whiteColor),
-//                 SizedBox(height: 20.h),
-//                 CircleAvatar(
-//                   radius: 30.r,
-//                   backgroundColor: whiteColor,
-//                   child: IconButton(
-//                     onPressed: () => model.changePageController(),
-//                     icon: Icon(
-//                       Icons.arrow_forward,
-//                       color: primaryColor,
-//                     ),
-//                   ),
-//                 )
-//               ]),
-           

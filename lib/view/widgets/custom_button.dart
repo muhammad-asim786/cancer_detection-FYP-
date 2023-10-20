@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+
 import '../../core/constant/color.dart';
 
 class DefaultButton extends StatelessWidget {
@@ -22,20 +23,20 @@ class DefaultButton extends StatelessWidget {
     return SizedBox(
       width: 256.w,
       height: 70.h,
-      child: TextButton(
-        style: TextButton.styleFrom(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(100.r),
-              topRight: Radius.circular(100.r),
-              bottomLeft: Radius.circular(100.r),
-            ),
-          ),
-          padding: EdgeInsets.zero, // Remove padding to fill the entire button
-        ),
-        onPressed: onPressed as void Function()?,
+      child: InkWell(
+        splashColor: primaryColor, // Change this to the color you want
+
+        onTap: onPressed as void Function()?,
         child: Container(
           decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.5),
+                spreadRadius: 0.5,
+                blurRadius: 7,
+                offset: Offset(2, 5),
+              )
+            ],
             gradient: LinearGradient(
               colors: [buttonColorTop, buttonColormiddle, buttonColorbottom],
               begin: Alignment.topCenter,

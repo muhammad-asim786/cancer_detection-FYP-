@@ -1,14 +1,16 @@
 import 'package:canecer_scan/core/constant/color.dart';
 import 'package:canecer_scan/view/Auth/forgotpassword_screen/forgotpassword_screen.dart';
-import 'package:canecer_scan/view/custom_widget/custom_text.dart';
-import 'package:canecer_scan/view/custom_widget/custom_textfield.dart';
+import 'package:canecer_scan/view/animation/fade_animation.dart';
+import 'package:canecer_scan/view/widgets/custom_text.dart';
+import 'package:canecer_scan/view/widgets/custom_textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
-import '../../custom_widget/custom_button.dart';
-import '../../custom_widget/custom_text_account.dart';
-import '../../custom_widget/cutom_facebook_google_logo.dart';
+
+import '../../widgets/custom_button.dart';
+import '../../widgets/custom_text_account.dart';
+import '../../widgets/cutom_facebook_google_logo.dart';
 import '../signup_screen/signup_screen.dart';
 
 class SignInScreen extends StatelessWidget {
@@ -30,9 +32,9 @@ class SignInScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 80.h),
-            CustomTextField(hintText: 'Email'),
+            FadeAnimation(0.7, CustomTextField(hintText: 'Email')),
             SizedBox(height: 60.h),
-            CustomTextField(hintText: 'Password'),
+            FadeAnimation(0.7, CustomTextField(hintText: 'Password')),
             SizedBox(height: 20.h),
             GestureDetector(
               onTap: () => Get.to(() => ForgotpasswordScreen()),
@@ -47,7 +49,14 @@ class SignInScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 60.h),
-            DefaultButton(text: 'Log in'),
+            FadeAnimation(
+                0.1,
+                DefaultButton(
+                  text: 'Log in',
+                  onPressed: () {
+                    Get.to(() => SignInUpScreen());
+                  },
+                )),
             SizedBox(height: 60.h),
             CustomText(
               text: 'or login using ',
@@ -56,14 +65,15 @@ class SignInScreen extends StatelessWidget {
               color: blackColor.withOpacity(0.5),
             ),
             SizedBox(height: 50.h),
-            ContainerRowWithShadowedImages(
-              onFacebookTab: () {},
-              onGoogleTab: () {},
+            FadeAnimation(
+              0.9,
+              ContainerRowWithShadowedImages(
+                  onFacebookTab: () {}, onGoogleTab: () {}),
             ),
             Expanded(
               child: Align(
                 alignment: Alignment.bottomCenter,
-                child: GestureDetector(
+                child: InkWell(
                   onTap: () => Get.to(() => SignInUpScreen()),
                   child: CustomTextWihtAccount(
                     text: 'Don’t have an account? ',
