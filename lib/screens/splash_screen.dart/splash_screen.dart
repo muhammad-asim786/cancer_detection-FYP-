@@ -1,8 +1,9 @@
 import 'package:canecer_scan/core/constant/color.dart';
-import 'package:canecer_scan/view/splash_screen.dart/splash_model.dart';
+import 'package:canecer_scan/screens/splash_screen.dart/splash_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
+
 import '../../core/constant/image.dart';
 
 class SplashScreen extends StatefulWidget {

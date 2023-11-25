@@ -24,8 +24,7 @@ class DefaultButton extends StatelessWidget {
       width: 256.w,
       height: 70.h,
       child: InkWell(
-        splashColor: primaryColor, // Change this to the color you want
-
+        splashColor: primaryColor,
         onTap: onPressed as void Function()?,
         child: Container(
           decoration: BoxDecoration(
@@ -38,24 +37,21 @@ class DefaultButton extends StatelessWidget {
               )
             ],
             gradient: LinearGradient(
-              colors: [buttonColorTop, buttonColormiddle, buttonColorbottom],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-            ),
+                colors: [buttonColorTop, buttonColormiddle, buttonColorbottom],
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter),
             borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(100.r),
-              topRight: Radius.circular(100.r),
-              bottomLeft: Radius.circular(100.r),
-            ),
+                topLeft: Radius.circular(100.r),
+                topRight: Radius.circular(100.r),
+                bottomLeft: Radius.circular(100.r)),
           ),
           child: Center(
             child: Text(
               text!.tr,
               style: TextStyle(
-                fontSize: 20.sp,
-                fontWeight: FontWeight.bold,
-                color: whiteColor,
-              ),
+                  fontSize: 20.sp,
+                  fontWeight: FontWeight.bold,
+                  color: whiteColor),
             ),
           ),
         ),

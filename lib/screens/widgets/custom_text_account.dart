@@ -1,5 +1,5 @@
 import 'package:canecer_scan/core/constant/color.dart';
-import 'package:canecer_scan/view/animation/fade_animation.dart';
+import 'package:canecer_scan/screens/animation/fade_animation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -19,20 +19,16 @@ class CustomTextWihtAccount extends StatelessWidget {
       children: [
         Text(text,
             style: GoogleFonts.poppins(
-              textStyle: TextStyle(
-                fontSize: 16.sp,
-                color: blackColor,
-              ),
+              textStyle: TextStyle(fontSize: 13.sp, color: blackColor),
             )),
         FadeAnimation(
           0.5,
           Text(text2,
               style: GoogleFonts.poppins(
                 textStyle: TextStyle(
-                  fontSize: 17.sp,
-                  color: primaryColor,
-                  fontWeight: FontWeight.bold,
-                ),
+                    fontSize: 15.sp,
+                    color: primaryColor,
+                    fontWeight: FontWeight.bold),
               )),
         ),
       ],

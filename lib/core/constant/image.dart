@@ -7,14 +7,23 @@ const String staticImagePath = "assets/images";
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<IMAGES>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 //////
 //
-String loading = '$staticImagePath/Loading.png';
-String splashLogo = '$staticImagePath/splash_logo.png';
-String firstOnbaridingImage = '$staticImagePath/onbarding_firstimage.png';
-String secondOnbaridingImage = '$staticImagePath/onbarding_secondimage.png';
-String thirdOnbaridingImage = '$staticImagePath/onbarding_thirdimage.png';
-String ellipse = '$staticImagePath/Ellipse.png';
-String googleImage = '$staticImagePath/Google.png';
-String facebookImage = '$staticImagePath/Facebook.png';
-String forgotPassword = '$staticImagePath/Forgot password.png';
-String createNewpasswordImage = '$staticImagePath/createnewpassword.png';
-String profileIamge = '$staticImagePath/profileImage.png';
+// Auth Images;
+const String loading = '$staticImagePath/Loading.png';
+const String splashLogo = '$staticImagePath/splash_logo.png';
+const String firstOnbaridingImage = '$staticImagePath/onbarding_firstimage.png';
+const String secondOnbaridingImage =
+    '$staticImagePath/onbarding_secondimage.png';
+const String thirdOnbaridingImage = '$staticImagePath/onbarding_thirdimage.png';
+const String ellipse = '$staticImagePath/Ellipse.png';
+const String googleImage = '$staticImagePath/Google.png';
+const String facebookImage = '$staticImagePath/Facebook.png';
+const String forgotPassword = '$staticImagePath/Forgot password.png';
+const String createNewpasswordImage = '$staticImagePath/createnewpassword.png';
+const String profileIamge = '$staticImagePath/profileImage.png';
+
+// home images;
+const String profile = '$staticImagePath/profile.png';
+const String uvIndex = '$staticImagePath/uv_index.png';
+const String myBody = '$staticImagePath/my_body.png';
+const String message = '$staticImagePath/message.png';
+const String camera = '$staticImagePath/camera.png';

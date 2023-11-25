@@ -1,13 +1,14 @@
 import 'package:canecer_scan/core/constant/color.dart';
-import 'package:canecer_scan/view/Auth/forgotpassword_screen/forgotpassword_screen.dart';
-import 'package:canecer_scan/view/animation/fade_animation.dart';
-import 'package:canecer_scan/view/widgets/custom_text.dart';
-import 'package:canecer_scan/view/widgets/custom_textfield.dart';
+import 'package:canecer_scan/screens/Auth/forgotpassword_screen/forgotpassword_screen.dart';
+import 'package:canecer_scan/screens/animation/fade_animation.dart';
+import 'package:canecer_scan/screens/widgets/custom_text.dart';
+import 'package:canecer_scan/screens/widgets/custom_textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 
+import '../../home_screen/home_screen.dart';
 import '../../widgets/custom_button.dart';
 import '../../widgets/custom_text_account.dart';
 import '../../widgets/cutom_facebook_google_logo.dart';
@@ -52,11 +53,8 @@ class SignInScreen extends StatelessWidget {
             FadeAnimation(
                 0.1,
                 DefaultButton(
-                  text: 'Log in',
-                  onPressed: () {
-                    Get.to(() => SignInUpScreen());
-                  },
-                )),
+                    text: 'Log in',
+                    onPressed: () => Get.to(() => MyBodyScreen()))),
             SizedBox(height: 60.h),
             CustomText(
               text: 'or login using ',

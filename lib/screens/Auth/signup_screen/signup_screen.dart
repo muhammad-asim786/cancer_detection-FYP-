@@ -1,9 +1,9 @@
 import 'package:canecer_scan/core/constant/color.dart';
 import 'package:canecer_scan/core/constant/image.dart';
-import 'package:canecer_scan/view/Auth/signin_screen/signin_screen.dart';
-import 'package:canecer_scan/view/animation/fade_animation.dart';
-import 'package:canecer_scan/view/widgets/custom_text.dart';
-import 'package:canecer_scan/view/widgets/custom_textfield.dart';
+import 'package:canecer_scan/screens/Auth/signin_screen/signin_screen.dart';
+import 'package:canecer_scan/screens/animation/fade_animation.dart';
+import 'package:canecer_scan/screens/widgets/custom_text.dart';
+import 'package:canecer_scan/screens/widgets/custom_textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
