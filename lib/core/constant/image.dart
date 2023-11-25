@@ -20,6 +20,7 @@ const String facebookImage = '$staticImagePath/Facebook.png';
 const String forgotPassword = '$staticImagePath/Forgot password.png';
 const String createNewpasswordImage = '$staticImagePath/createnewpassword.png';
 const String profileIamge = '$staticImagePath/profileImage.png';
+const String greyImage = '$staticImagePath/greyContaier.png';
 
 // home images;
 const String profile = '$staticImagePath/profile.png';
@@ -27,3 +28,11 @@ const String uvIndex = '$staticImagePath/uv_index.png';
 const String myBody = '$staticImagePath/my_body.png';
 const String message = '$staticImagePath/message.png';
 const String camera = '$staticImagePath/camera.png';
+
+// uv index images;
+const String sun = '$staticImagePath/sun.png';
+
+// my body images;
+const String body = '$staticImagePath/body.png';
+const String menu = '$staticImagePath/menu.png';
+const String skinImage = '$staticImagePath/skinImage.png';

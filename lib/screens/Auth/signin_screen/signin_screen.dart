@@ -54,7 +54,7 @@ class SignInScreen extends StatelessWidget {
                 0.1,
                 DefaultButton(
                     text: 'Log in',
-                    onPressed: () => Get.to(() => MyBodyScreen()))),
+                    onPressed: () => Get.to(() => HomeScreen()))),
             SizedBox(height: 60.h),
             CustomText(
               text: 'or login using ',
